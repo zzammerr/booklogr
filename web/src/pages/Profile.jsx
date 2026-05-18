@@ -31,6 +31,7 @@ const PROFILE_TABS = [
     { id: 2, status: "To be read", tKey: "reading_status.to_be_read", icon: RiBookmarkLine },
     { id: 3, status: "Read", tKey: "reading_status.read", icon: RiBook2Line },
     { id: 4, status: "Did not finish", tKey: "reading_status.did_not_finish", icon: RiArchiveLine },
+    { id: 4, status: "Want to have", tKey: "reading_status.want_to_have", icon: RiArchiveLine },
 ];
 
 function Profile() {
