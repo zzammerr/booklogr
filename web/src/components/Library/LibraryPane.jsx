@@ -21,10 +21,10 @@ const TAB_WANT_TO_HAVE = 4;
 
 const TABS_CONFIG = [
     { id: TAB_CURRENTLY_READING, status: "Currently reading", tKey: "reading_status.currently_reading", icon: RiBookOpenLine },
-    { id: TAB_TO_BE_READ, status: "To be read", tKey: "reading_status.to_be_read", icon: RiBookmarkLine },
-    { id: TAB_READ, status: "Read", tKey: "reading_status.read", icon: RiBook2Line },
-    { id: TAB_DID_NOT_FINISH, status: "Did not finish", tKey: "reading_status.did_not_finish", icon: RiArchiveLine },
-    { id: TAB_WANT_TO_HAVE, status: "Want to have", tKey: "reading_status.want_to_have", icon: RiArchiveLine },
+   // { id: TAB_TO_BE_READ, status: "To be read", tKey: "reading_status.to_be_read", icon: RiBookmarkLine },
+    { id: TAB_READ, status: "Read", tKey: "reading_status.read", icon: RiArchiveLine },
+   // { id: TAB_DID_NOT_FINISH, status: "Did not finish", tKey: "reading_status.did_not_finish", icon: RiArchiveLine },
+    { id: TAB_WANT_TO_HAVE, status: "Want to have", tKey: "reading_status.want_to_have", icon: RiBookmarkLine },
 ];
 
 function LibraryPane() {
