@@ -42,7 +42,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            docker.io/mozzo/booklogr-web
+            docker.io/zzammerr/booklogr-web
           tags: |
             # set latest tag for default branch
             type=raw,value=latest,enable={{is_default_branch}}
