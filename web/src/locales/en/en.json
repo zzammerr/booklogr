@@ -5,12 +5,12 @@
     "reading_status": {
         "title": "Reading status",
         "read": "Read",
-        "currently_reading": "Currently reading",
+        "currently_reading": "Reading",
         "to_be_read": "To be read",
         "all": "All",
         "want_to_read": "Want to read",
         "did_not_finish": "Did not finish",
-        "want_to_have" : "Want to have"
+        "want_to_have" : "Want"
     },
 
     "onboarding": {
