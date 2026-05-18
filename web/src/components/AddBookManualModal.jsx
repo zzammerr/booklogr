@@ -144,6 +144,7 @@ function AddBookManualModal(props) {
                             <option value="Currently reading">Currently reading</option>
                             <option value="Read">Read</option>
                             <option value="Did not finish">Did not finish</option>
+                            <option value="Want to have">Want to have</option>
                         </Select>
                     </div>
                 </Card>
