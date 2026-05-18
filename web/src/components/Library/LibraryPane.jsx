@@ -14,10 +14,11 @@ import Controls from './Controls';
 import BookTabs from '../BookTabs';
 
 const TAB_CURRENTLY_READING = 0;
-const TAB_TO_BE_READ = 1;
-const TAB_READ = 2;
-const TAB_DID_NOT_FINISH = 3;
-const TAB_WANT_TO_HAVE = 4;
+const TAB_READ = 1;
+const TAB_WANT_TO_HAVE = 2;
+const TAB_TO_BE_READ = 3;
+const TAB_DID_NOT_FINISH = 4;
+
 
 const TABS_CONFIG = [
     { id: TAB_CURRENTLY_READING, status: "Currently reading", tKey: "reading_status.currently_reading", icon: RiBookOpenLine },
