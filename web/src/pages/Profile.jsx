@@ -220,6 +220,7 @@ function Profile() {
                     <BookStatsCard icon={<RiBookOpenLine className="w-8 h-8 dark:text-white"/>} number={data?.num_books_reading || 0} text={t("profile.stats.reading")}/>
                     <BookStatsCard icon={<RiBookmarkLine className="w-8 h-8 dark:text-white"/>} number={data?.num_books_tbr || 0} text={t("profile.stats.to_be_read")}/>
                     <BookStatsCard icon={<RiArchiveLine className="w-8 h-8 dark:text-white"/>} number={data?.num_books_dnf || 0} text={t("profile.stats.did_not_finish")}/>
+                    <BookStatsCard icon={<RiArchiveLine className="w-8 h-8 dark:text-white"/>} number={data?.num_books_want || 0} text={t("profile.stats.want_to_have")}/>
 
                 </div>
                 <div className="relative flex items-center py-5">

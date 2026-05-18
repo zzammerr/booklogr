@@ -17,12 +17,14 @@ const TAB_CURRENTLY_READING = 0;
 const TAB_TO_BE_READ = 1;
 const TAB_READ = 2;
 const TAB_DID_NOT_FINISH = 3;
+const TAB_WANT_TO_HAVE = 3;
 
 const TABS_CONFIG = [
     { id: TAB_CURRENTLY_READING, status: "Currently reading", tKey: "reading_status.currently_reading", icon: RiBookOpenLine },
     { id: TAB_TO_BE_READ, status: "To be read", tKey: "reading_status.to_be_read", icon: RiBookmarkLine },
     { id: TAB_READ, status: "Read", tKey: "reading_status.read", icon: RiBook2Line },
     { id: TAB_DID_NOT_FINISH, status: "Did not finish", tKey: "reading_status.did_not_finish", icon: RiArchiveLine },
+    { id: TAB_WANT_TO_HAVE, status: "Want to have", tKey: "reading_status.want_to_have", icon: RiArchiveLine },
 ];
 
 function LibraryPane() {
@@ -31,7 +33,7 @@ function LibraryPane() {
         const match = window.location.hash.match(/^#tab-(\d+)$/);
         if (match) {
             const index = parseInt(match[1], 10);
-            if (index >= TAB_CURRENTLY_READING && index <= TAB_DID_NOT_FINISH) return index;
+            if (index >= TAB_CURRENTLY_READING && index <= TAB_WANT_TO_HAVE) return index;
         }
         return TAB_CURRENTLY_READING;
     };
@@ -82,6 +84,8 @@ function LibraryPane() {
             status = "Read"
         } else if (activeTab == TAB_DID_NOT_FINISH) {
             status = "Did not finish"
+        } else if (activeTab == TAB_WANT_TO_HAVE) {
+            status = "Want to have"
         }
         return status;
     }

@@ -302,6 +302,7 @@ def add_book():
                       - Currently reading
                       - Read
                       - Did not finish
+                      - Want to have
                     default: To be read
                   current_page:
                     type: integer

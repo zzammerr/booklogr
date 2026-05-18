@@ -9,7 +9,8 @@
         "to_be_read": "To be read",
         "all": "All",
         "want_to_read": "Want to read",
-        "did_not_finish": "Did not finish"
+        "did_not_finish": "Did not finish",
+        "want_to_have" : "Want to have"
     },
 
     "onboarding": {
@@ -210,7 +211,8 @@
             "read": "Read",
             "reading": "Reading",
             "to_be_read": "To Be Read",
-            "did_not_finish": "Did Not Finish"
+            "did_not_finish": "Did Not Finish",
+            "want_to_have" :"Want to have"
         },
         "update_profile": "Update profile",
         "all_books": "All books",

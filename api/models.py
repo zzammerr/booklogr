@@ -174,7 +174,7 @@ class ProfileSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Profile()
         load_instance = True
-        fields = ("id", "display_name", "visibility", "books", "num_books_read", "num_books_reading", "num_books_tbr","num_books_dnf","profile_picture",)
+        fields = ("id", "display_name", "visibility", "books", "num_books_read", "num_books_reading", "num_books_tbr","num_books_dnf","profile_picture","num_books_want")
 
     id = ma.Integer()
     display_name = ma.String()
@@ -187,6 +187,7 @@ class ProfileSchema(ma.SQLAlchemySchema):
     num_books_reading = ma.Method("get_num_books_currently_reading")
     num_books_tbr = ma.Method("get_num_books_to_be_read")
     num_books_dnf = ma.Method("get_num_books_did_not_finish")
+    num_books_want = ma.Method("get_num_books_want_to_have")
     
 
     def get_num_books_read(self, obj):
@@ -217,6 +218,13 @@ class ProfileSchema(ma.SQLAlchemySchema):
         else:
             return None
  
+    def get_num_books_want_to_have(self, obj):
+        query = Books.query.filter(Books.owner_id==obj.owner_id, Books.reading_status=="Want to have").count()
+        if query:
+            return query
+        else:
+            return None
+
 class UserSettings(db.Model):
     __tablename__ = "user_settings"
     id = db.Column(db.Integer, primary_key=True)

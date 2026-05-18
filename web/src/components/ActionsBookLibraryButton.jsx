@@ -59,6 +59,7 @@ function ActionsBookLibraryButton(props) {
             <DropdownItem onClick={() => (clickDropItem("To be read"))}><RiBookmarkLine size={18} className="mr-1"/>{t("reading_status.to_be_read")}</DropdownItem>
             <DropdownItem onClick={() => (clickDropItem("Read"))}><RiBook2Line size={18} className="mr-1"/>{t("reading_status.read")}</DropdownItem>
             <DropdownItem onClick={() => (clickDropItem("Did not finish"))}><RiArchiveLine size={18} className="mr-1"/>{t("reading_status.did_not_finish")}</DropdownItem>
+            <DropdownItem onClick={() => (clickDropItem("Want to have"))}><RiArchiveLine size={18} className="mr-1"/>{t("reading_status.want_to_have")}</DropdownItem>
             <DropdownDivider />
 
             <DropdownItem onClick={() => setOpenNotesModal(true)}><RiStickyNoteLine size={18} className="mr-1"/>{t("notes.title")}</DropdownItem>
