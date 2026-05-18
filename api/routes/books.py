@@ -346,10 +346,10 @@ def add_book():
                       current_page=current_page, total_pages=total_pages, author=author)
       new_book.save_to_db()
 
-      if reading_status in ("Currently reading", "Read", "Did not finish"):
+      if reading_status in ("Currently reading", "Read", "Did not finish", "Want to have"):
         new_session = ReadingSessions(book_id=new_book.id, status="Currently reading")
 
-        if request.json["reading_status"] in ("Read", "Did not finish"):
+        if request.json["reading_status"] in ("Read", "Did not finish", "Want to have"):
           new_session.end_date = datetime.now(timezone.utc)
           new_session.status = request.json["reading_status"]
         new_session.save_to_db()
@@ -426,7 +426,7 @@ def edit_book(id):
             else:
                 return jsonify({"error": "Unprocessable entity", "message": "Can't process change. Total pages must be an integer."}), 422
         if "status" in request.json:
-            if request.json["status"] in ("Currently reading", "To be read", "Read", "Did not finish"):
+            if request.json["status"] in ("Currently reading", "To be read", "Read", "Did not finish", "Want to have"):
                 active_session = ReadingSessions.get_active(id, claim_id)
                 book.reading_status = request.json["status"]
 
@@ -436,7 +436,7 @@ def edit_book(id):
                   if not active_session:
                       new_session = ReadingSessions(book_id=id, status="Currently reading")
                       new_session.save_to_db()
-                elif request.json["status"] in ("Read", "Did not finish"):
+                elif request.json["status"] in ("Read", "Did not finish", "Want to have"):
                   if active_session:
                       active_session.end_date = datetime.now(timezone.utc)
                       active_session.status = request.json["status"]
